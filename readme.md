@@ -29,8 +29,38 @@ echo "<p>Paragraph</p>" | ./greph "p[0].text"
 ## Query
 Format `selector[index]extractor`.
 
-| Selector                    | Index                                    | Extractor         |
-| ----------------------------| -----------------------------------------| ----------------- |
-| Class if started with `.`   | [0] get one at index `0`                 | Text if .text     |
-| Tag if not started with `.` | [2:5] get all between index `2` and `5`  | Attr if :href,etc |
-|                             | [:5] get all from index `0`              | Attr if :href,etc |
+### Selector
+Select by tag :
+```bash
+echo "<p>Paragraph</p>" | ./greph "p[0].text"
+```
+Select by class :
+```bash
+echo "<h1 class="title">Title</h1>" | ./greph ".title[0].text"
+```
+
+### Index
+Get one from index `0`:
+```bash
+./greph https://example.com "p[0].text"
+```
+
+Get all bwtween index `2` and `5`:
+```bash
+./greph https://example.com "p[2:5].text"
+```
+
+Get all until index `5`:
+```bash
+./greph https://example.com "p[0:5].text"
+```
+
+### Extractor
+Extract the text from tag :
+```bash
+echo "<p>Paragraph</p>" | ./greph "p[0].text"
+```
+Extract the text from attributes :
+```bash
+echo "<a href="https://example.com">Title</h1>" | ./greph "a[0]:href"
+```
