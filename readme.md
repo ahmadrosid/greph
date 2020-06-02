@@ -2,7 +2,7 @@
 
 Just like grep but for html document.
 
-## Compile
+## Install
 Clone repository :
 ```bash
 git clone https://github.com/ahmadrosid/greph.git
