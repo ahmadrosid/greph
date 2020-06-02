@@ -55,7 +55,7 @@ func StopErr(e error) {
 func HandleStdin() {
 	if len(os.Args) == 1 {
 		fmt.Println("Please sepcify stdin and selector")
-		fmt.Println("Usage:\n\techo \"<p>Paragraph</p> | greph \"p[0].text\"")
+		fmt.Println("Usage:\n\techo \"<p>Paragraph</p>\" | greph \"p[0].text\"")
 		return
 	}
 
