@@ -52,7 +52,7 @@ Get all bwtween index `2` and `5`:
 
 Get all until index `5`:
 ```bash
-./greph https://example.com "p[0:5].text"
+./greph https://example.com "p[:5].text"
 ```
 
 ### Extractor
