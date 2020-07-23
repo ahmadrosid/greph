@@ -1,6 +1,7 @@
 # Greph
 
 Just like grep but for html document.
+![Demo](https://github.com/ahmadrosid/greph/raw/master/demo.gif)
 
 ## Install
 Clone repository :
