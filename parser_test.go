@@ -47,7 +47,7 @@ func TestParseDocument_parse_class_attr(t *testing.T) {
 func TestParseDocument_parse_class_attr_index(t *testing.T) {
 	q := Query{ selector: ".title", text: "", attr: "href", index: 0}
 	doc := CreateDoc(`
-		<a href="google.com"></a>
+		<a class="title"  href="google.com"></a>
 	`)
 	res := ParseDocument(doc, q)
 	assert.Equal(t, "google.com", res)
